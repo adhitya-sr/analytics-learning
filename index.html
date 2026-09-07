@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Analytics Learning | Adhitya</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+            color: #222;
+            background: #f5f7fa;
+        }
+
+        /* NAVBAR */
+        nav {
+            background: #ffffff;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: #2563eb;
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+            background: #ffffff;
+        }
+
+        .hero-content {
+            max-width: 700px;
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e8f0fe;
+            color: #2563eb;
+            padding: 7px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 52px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #666;
+            max-width: 600px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            background: #2563eb;
+            color: white;
+            text-decoration: none;
+            padding: 13px 22px;
+            border-radius: 8px;
+            margin-right: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+        }
+
+        .button-secondary {
+            background: #ffffff;
+            color: #2563eb;
+            border: 1px solid #2563eb;
+        }
+
+        .button-secondary:hover {
+            background: #eff6ff;
+        }
+
+        /* SECTION */
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ABOUT */
+        .about {
+            background: #f5f7fa;
+        }
+
+        .about-content {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .about-content p {
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* PROJECTS */
+        .projects {
+            background: #ffffff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .card {
+            background: #f8fafc;
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .card a {
+            color: #2563eb;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* ANALYTICS */
+        .analytics {
+            background: #111827;
+            color: white;
+            text-align: center;
+        }
+
+        .analytics p {
+            max-width: 700px;
+            margin: 15px auto 30px;
+            color: #d1d5db;
+        }
+
+        /* CONTACT */
+        .contact {
+            background: #f5f7fa;
+            text-align: center;
+        }
+
+        .contact p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #ffffff;
+            text-align: center;
+            padding: 25px;
+            color: #777;
+            font-size: 13px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 800px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .project-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+            }
+
+            .hero {
+                padding: 50px 7%;
+            }
+
+            section {
+                padding: 60px 7%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">Adhitya Analytics</div>
+
+        <div>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#analytics">Analytics</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">Data Analytics Learning Project</span>
+
+            <h1>
+                Learning to turn
+                data into insights.
+            </h1>
+
+            <p>
+                A personal learning website created to explore
+                Google Analytics 4, website tracking, and
+                user behavior analysis.
+            </p>
+
+            <a href="#projects" class="button">
+                Explore Projects
+            </a>
+
+            <a href="#analytics" class="button button-secondary">
+                Learn About Analytics
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="about">
+
+        <div class="section-title">
+            <h2>About This Project</h2>
+            <p>A simple website for practicing web analytics.</p>
+        </div>
+
+        <div class="about-content">
+
+            <p>
+                This website is part of my journey to develop
+                practical skills in Data Analytics.
+            </p>
+
+            <p>
+                I am learning how to collect, explore, and analyze
+                website data using Google Analytics 4.
+            </p>
+
+            <p>
+                The goal is to understand how users interact with
+                a website and turn those interactions into
+                meaningful insights.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
+
+        <div class="section-title">
+
+            <h2>Analytics Projects</h2>
+
+            <p>
+                Some projects I am working on while learning data analytics.
+            </p>
+
+        </div>
+
+
+        <div class="project-grid">
+
+            <div class="card">
+
+                <h3>Sales Analysis</h3>
+
+                <p>
+                    Exploring sales performance, revenue,
+                    profit, products, and customer behavior.
+                </p>
+
+                <a href="#contact">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>HR Analytics</h3>
+
+                <p>
+                    Analyzing employee data to understand
+                    workforce trends and HR performance.
+                </p>
+
+                <a href="#contact">
+                    View Project →
+                </a>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Web Analytics</h3>
+
+                <p>
+                    Learning how visitors interact with a website
+                    using Google Analytics 4.
+                </p>
+
+                <a href="#analytics">
+                    View Project →
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ANALYTICS -->
+    <section id="analytics" class="analytics">
+
+        <div class="section-title">
+
+            <h2>Why Web Analytics?</h2>
+
+            <p>
+                Data can tell us what users actually do,
+                not just what we assume they do.
+            </p>
+
+        </div>
+
+        <p>
+            Through Google Analytics 4, this website will be used
+            to study metrics such as users, sessions, page views,
+            engagement, traffic sources, and user interactions.
+        </p>
+
+        <button class="button" onclick="analyticsClick()">
+            Test Interaction
+        </button>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="contact">
+
+        <div class="section-title">
+
+            <h2>Let's Connect</h2>
+
+            <p>
+                Interested in data analytics and learning new things.
+            </p>
+
+        </div>
+
+        <a
+            href="https://github.com/adhitya-sr"
+            target="_blank"
+            class="button"
+        >
+            Visit GitHub
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        © 2026 Adhitya — Analytics Learning Project
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        function analyticsClick() {
+
+            alert(
+                "Interaction recorded for analytics practice!"
+            );
+
+        }
+
+    </script>
+
+</body>
+</html>
