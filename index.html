@@ -272,7 +272,15 @@
         <div class="logo">Adhitya Analytics</div>
 
         <div>
-            <a href="#about">Abouti</a>
+            <a 
+                href="#about"
+                class="button"
+                onclic="gtag('event', 'video_watch', {
+                    watch_time: 120
+                })";
+            >
+                About
+            </a>
             <a href="#projects">Projects</a>
             <a href="#analytics">Analytics</a>
             <a href="#contact">Contact</a>
